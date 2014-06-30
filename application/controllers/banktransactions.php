@@ -4,8 +4,14 @@ class Banktransactions extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('banktransactions/import');
+        $this->import_form();
 	}
+
+    public function import_form()
+    {
+        $tmpl['bankaccounts']  = $this->zohobooks->getBankaccounts('Status.Active');
+        $this->load->view('banktransactions/import', $tmpl);
+    }
 }
 
 /* End of file banktransactions.php */

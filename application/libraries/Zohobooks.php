@@ -182,6 +182,20 @@ class Zohobooks {
     }
 
     /**
+     * Returns bank accounts.
+     *
+     * @return string JSON or null
+     */
+    public function getBankaccounts($filter_by=false){
+        if ($filter_by) $filter_by = 'Status.All';
+        $params = array(
+            'filter_by'=>$filter_by
+        );
+        return $this->callZohoBooks($this->bankAccountsUrl, null, METHOD_GET, 1, $params);
+    }
+
+
+    /**
      * This function communicates with Zoho Books REST API.
      * You don't need to call this function directly. It's only for inner class working.
      *
@@ -193,8 +207,8 @@ class Zohobooks {
      */
     private function callZohoBooks($url, $data = null, $method = METHOD_GET, $page = 1, $params = false){
         $curl = curl_init();
+        $filter = '';
         if($params){
-            $filter = '';
             foreach($params as $key => $value){
                 $filter = $filter.'&'.$key.'='.$value;
             }
