@@ -45,8 +45,11 @@ class Zohobooks {
 
     public function __construct(){
 
-        $this->apiKey = '';
-        $this->organizationId = '';
+        $CI =& get_instance();
+
+        // get required connection details from config file
+        $this->apiKey = $CI->config->item('zohobooks_apiKey');
+        $this->organizationId = $CI->config->item('zohobooks_organizationId');
 
         $this->endPointUrl               = "https://books.zoho.com/api/v{$this->zohoBooksApiVersion}/";
         $this->taskUrl                   = $this->endPointUrl."tasks";
