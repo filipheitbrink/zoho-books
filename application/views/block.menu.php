@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Dashboard</a></li>
-                <li><a href="<?php site_url('banktransactions'); ?>">Import bank transactions</a></li>
+                <li<?php echo ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'home')?' class="active"':''; ?>><a href="/">Dashboard</a></li>
+                <li<?php echo ($this->uri->segment(1) == 'banktransactions')?' class="active"':''; ?>><a href="<?php echo site_url('banktransactions'); ?>">Import bank transactions</a></li>
             </ul>
         </div>
