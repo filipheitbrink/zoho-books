@@ -43,10 +43,10 @@ class Zohobooks {
     private $projectsUrl;
     private $settingsUrl;
 
-    public function __construct($apiKey,$organizationId){
+    public function __construct(){
 
-        $this->apiKey = $apiKey;
-        $this->organizationId = $organizationId;
+        $this->apiKey = '';
+        $this->organizationId = '';
 
         $this->endPointUrl               = "https://books.zoho.com/api/v{$this->zohoBooksApiVersion}/";
         $this->taskUrl                   = $this->endPointUrl."tasks";
@@ -109,7 +109,7 @@ class Zohobooks {
     public function getAllContacts(){
         $morePages = true;
         $pageNumber = 1;
-        $contactsArray = [];
+        $contactsArray = array();
         while($morePages){
             $result = $this->callZohoBooks($this->contactsUrl,null,METHOD_GET,$pageNumber);
             $contacts = $result->contacts;
