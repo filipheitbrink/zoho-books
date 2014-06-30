@@ -3,15 +3,15 @@
  *
  * A PHP class that acts as a wrapper for the Zoho Books API.
  *
- * Credits:
- * Based on a class developed by Ransom Carroll [github.com/ransomcarroll]
- *
  * @package    CodeIgniter
  * @subpackage libraries
  * @category   library
  * @version    0.1
  * @author     Filip Heitbrink
  * @link       http://github.com/filipheitbrink
+ *
+ * Credits:
+ * Based on a class developed by Ransom Carroll [github.com/ransomcarroll]
  *
  */
 class Zohobooks {
