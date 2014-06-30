@@ -1,17 +1,20 @@
-<?php
+<?php if(!defined('BASEPATH')) exit('No direct script access allowed');
 /**
-*
-* A PHP class that acts as wrapper for Zoho Books API.
-*
-*
-* Copyright 2013 Cart Designers, LLC
-* Licensed under the Apache License 2.0
-*
-* Author: Ransom Carroll [github.com/ransomcarroll]
-* Version: 1.0
-*
-*/
-class ZohoBooks {
+ *
+ * A PHP class that acts as wrapper for Zoho Books API.
+ *
+ * Credits:
+ * Based on a class developed by Ransom Carroll [github.com/ransomcarroll]
+ *
+ * @package    CodeIgniter
+ * @subpackage libraries
+ * @category   library
+ * @version    0.1
+ * @author     Filip Heitbrink
+ * @link       http://github.com/filipheitbrink
+ *
+ */
+class Zohobooks {
 
     private $timeout = 10;
     private $debug = false;
