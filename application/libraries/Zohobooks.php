@@ -1,7 +1,7 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed');
 /**
  *
- * A PHP class that acts as wrapper for Zoho Books API.
+ * A PHP class that acts as a wrapper for the Zoho Books API.
  *
  * Credits:
  * Based on a class developed by Ransom Carroll [github.com/ransomcarroll]
